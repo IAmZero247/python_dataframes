@@ -54,7 +54,87 @@
 	  pokemonSeries.tail(2)
       ```	
 
-7.  Built-In Functions 	  
+7.  Built-In Functions 	[len type dir sorted list dict min max]  
+    
+	  ```
+	  pokemon = pd.read_csv("pokemon.csv", usecols = ["Pokemon"], squeeze = True)
+      google = pd.read_csv("google_stock_price.csv", squeeze = True)
+	  
+	  1. len(google)
+	  2. type(pokemon) -> available methods and attributes 
+	  3. sorted(pokemon)
+	  4. list(pokemon)
+	  5. dict(google)
+	  6. max(google)
+	  7. min(google)
+	  ```
+	  
+	  
+8.  More Series Attribute [is_unique ndim shape size name]
+
+      ```
+	  pokemon.is_unique    -> true if values are unique
+      google.is_unique
+	 
+	  pokemon.ndim
+      google.ndim
+	 
+	  pokemon.shape        -> rows*col
+      google.shape
+	 
+	  pokemon.size         -> includes nulls , None
+      google.size
+	 
+	  pokemon.name
+      google.name
+	  ```
+	 
+	  ```
+	  pokemon.name = "Pocket Monsters"
+	  pokemon.head()
+	 
+	  0     Bulbasaur
+	  1       Ivysaur
+	  2      Venusaur
+	  3    Charmander
+      4    Charmeleon
+      Name: Pocket Monsters, dtype: object
+	  ```
+	  
+9.  The .sort_values() Method
+
+      ```
+      pokemon = pd.read_csv("pandas/pokemon.csv", usecols = ["Pokemon"], squeeze = True)
+      google = pd.read_csv("pandas/google_stock_price.csv", squeeze = True)
+	  
+	  
+	  pokemon.sort_values().head()
+	  pokemon.sort_values(ascending = False).tail()
+	  google.sort_values(ascending = False).head(1)
+	  
+      ```	  
+
+10. The inplace Parameter
+    
+      ```
+	  google = pd.read_csv("google_stock_price.csv", squeeze = True)
+	  google.head(3)
+	  
+	  11    49.95
+	  9     50.07
+	  0     50.12
+      Name: Stock Price, dtype: float64
+    
+	  google.sort_values(ascending = False, inplace = True)
+	  google.head(3)
+	  
+
+      3011    782.22
+      2859    776.60
+      3009    773.18
+      Name: Stock Price, dtype: float64
+      ```	  
+	  
 	  
 	  
 		

@@ -4,11 +4,11 @@
 1.	PY Basics
 
 
-      ```
+      
 	  |Rank  |Company |	Sector|	Industry|	Location|	Revenue|	Profits|	Employees|							
 	  |	1	 |Walmart |	Retailing |	General Merchandisers |	Bentonville, AR |	482130 |	14694 |	2300000 |
 	  | 2	 |Exxon Mobil |	Energy |	Petroleum Refining	| Irving, TX |	246204 |	16150 |	75600 |
-      ```	   
+      	   
 		
 2.	Series
 		
